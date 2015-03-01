@@ -9,7 +9,7 @@
 \bibliographystyle{plos2009}
 
 
-\title{Fast classification of newsgroup posts}
+\title{Spam Classification Techniques}
 
 
 \author{
@@ -36,8 +36,7 @@ WRITE ME!!!
 WRITE ME!!!
 \section{Related Work}
 
-We worked with the Ling-Spam dataset, a collection of spam emails and non
-
+We worked with the Ling-Spam dataset, a collection of spam and non-spam emails that is commonly used by researchers to benchmark spam detection techniques ~\cite{cormack2008email}.
 
 \subsection{Data processing}
 
@@ -160,7 +159,7 @@ These results highlight the benefits for some of the methods of reducing the num
 
 In this work, we compared ten different classifiers to predict the newsgroup for a particular newsgroup post using bag-of-words features. We found that, considering precision, recall, and time, the decision tree and random forest classifiers showed superior performance on this task.  The effect of feature selection was mostly on the time, although the improvement in performance was substantial for the random forest classifier on this task.
 
-There are a number of directions to go that would improve these results. First, we could expand our data set using available data from these and other related newsgroups. Second, we could consider more sophisticated features for the newsgroup posts than dictionary word counts; bi-grams, post length, or punctuation may be useful in this classification task. Third, we could use the most promising models in a more problem-tailored way. In particular, because the random forest classifier showed such promise in this task, we could consider applying it to this problem using multi class class labels instead of one-versus-rest class labels, and reducing the dimension of the feature space using supervised latent Dirichlet allocation based methods~\cite{zhu2009,lacoste2009}.
+There are a number of directions to go that would improve these results. First, we could expand our data set using available data from these and other related newsgroups. Second, we could consider more sophisticated features for the newsgroup posts than dictionary word counts; bi-grams, post length, or punctuation may be useful in this classification task. Third, we could use the most promising models in a more problem-tailored way. In particular, because the random forest classifier showed such promise in this task, we could consider applying it to this problem using multi class class labels instead of one-versus-rest class labels, and reducing the dimension of the feature space using supervised latent Dirichlet allocation based methods~\cite{lacoste2009}.
 
 %\subsubsection*{Acknowledgments}
 

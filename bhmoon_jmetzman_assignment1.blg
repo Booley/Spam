@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99d (TeX Live 2014/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: bhmoon_jmetzman_assignment1.aux
+The style file: plos2009.bst
+Database file #1: ref.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 4 entries,
+            2441 wiz_defined-function locations,
+            559 strings with 5280 characters,
+and the built_in function-call counts, 3092 in all, are:
+= -- 271
+> -- 52
+< -- 1
++ -- 26
+- -- 13
+* -- 233
+:= -- 356
+add.period$ -- 11
+call.type$ -- 4
+change.case$ -- 4
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 309
+empty$ -- 331
+format.name$ -- 16
+if$ -- 699
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 46
+newline$ -- 36
+num.names$ -- 4
+pop$ -- 79
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 52
+stack$ -- 0
+substring$ -- 365
+swap$ -- 85
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 21
+width$ -- 5
+write$ -- 59
