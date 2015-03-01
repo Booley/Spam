@@ -30,17 +30,13 @@ Princeton University \\
 \maketitle
 
 \begin{abstract}
-Streaming text data is ubiquitous: Google News, Twitter, Facebook, and many other websites have large numbers of posts from users every second. Often, we would like to classify these posts into specific categories as they arrive in order to organize the many new posts for other users to filter efficiently. In this assignment, we address the problem of classifying newsgroup posts using a number of different feature sets and methods for classification. We evaluate these methods on the 20 Newgroups data set, which contains 20,000 posts to twenty different newsgroups, where the newsgroup labels each post into each of twenty distinct classes. We train the classifiers on bag-of-words representations of each post, with and without feature selection. We find that decision trees and random forest classifiers uniformly have the highest precision and recall, whereas the perceptron and hinge loss perform poorly with respect to the other classifiers.
+WRITE ME!!!
 \end{abstract}
 \section{Introduction}
-
-The need for classifying streaming text is everywhere. The Associated Press releases articles that need to be filed under specific headings in Google News. Twitter and Facebook analyze each post in real time. Emails arrive in our inbox and must be filtered into \emph{Spam} or \emph{Inbox}. We are interested in understanding which classification methods perform well on this task. Furthermore, we would like to understand the properties of a classifier that are useful in performing this task in order to consider developing new classifiers for this purpose.
-
-In this work, we evaluate ten separate classification methods in the task of classifying newsgroup categories from posts. For this task, we have modeled the posts using a bag-of-words representation. We evaluated the performance of each of the classification methods with and without feature selection to quantify the benefits of feature selection on classifier performance and also on the computational speed of each of the classifiers.
-
+WRITE ME!!!
 \section{Related Work}
 
-This data set is the canonical text multi class classification data set in the machine learning community, and has been used as a benchmark for text classification methods in many contexts. In particular, recent text classification methods have used the bag-of-words representation of this data set projected down to a set of latent \emph{topics}, where the projection is informed by the class label~\cite{zhu2009,lacoste2009}. Then, for testing, new posts also are considered in the context of the low-dimensional topic space instead of their bag-of-words representation. This suggests that feature selection may benefit the classification task.
+We worked with the Ling-Spam dataset, a collection of spam emails and non
 
 
 \subsection{Data processing}
@@ -52,14 +48,14 @@ We downloaded the 20 Newsgroups data set on January 5th, 2015 from the UCI Machi
 We use ten different classification methods from the SciKitLearn Python libraries~\cite{scikit-learn}. All parameterizations are the default unless specified.
 \begin{enumerate}
 \item \emph{$K$-nearest neighbors} (KNN): using ten nearest neighbors and the ``KDTree" algorithm
-\item \emph{Logistic regression with $\ell_2$ penalty} (LR): using stochastic gradient descent 
+\item \emph{Logistic regression with $\ell_2$ penalty} (LR): using stochastic gradient descent
 \item \emph{Perceptron with $\ell_2$ penalty} (P2): using stochastic gradient descent
 \item \emph{Hinge loss with $\ell_2$ penalty} (HL2): using stochastic gradient descent
 \item \emph{Naive Bayes classifier} (NB): using multinomial implementation
-\item \emph{Support vector machine with linear kernel} (SVML): 
-\item \emph{Support vector machine with squared exponential kernel} (SVMS): 
+\item \emph{Support vector machine with linear kernel} (SVML):
+\item \emph{Support vector machine with squared exponential kernel} (SVMS):
 \item \emph{AdaBoost} (AB): using $100$ estimators
-\item \emph{Decision tree} (DT): using Gini impurity scores 
+\item \emph{Decision tree} (DT): using Gini impurity scores
 \item \emph{Random forest} (RF): using Gini impurity scores and 100 trees
 \end{enumerate}
 
@@ -85,7 +81,7 @@ We found variable performance of each of the ten classifiers on the 20 Newsgroup
 \begin{table}[htbp]
 \small
    \centering
-   \begin{tabular}{@{}|c|c|c|c|c|c|c|c|c|@{}} % Column formatting, @{} suppresses leading/trailing space 
+   \begin{tabular}{@{}|c|c|c|c|c|c|c|c|c|@{}} % Column formatting, @{} suppresses leading/trailing space
    \hline
     &  \multicolumn{4}{c}{No feature selection} &
   \multicolumn{4}{c|}{Feature selection}  \\
@@ -111,7 +107,7 @@ For each of the one-versus-rest classification problems, we extracted the \emph{
 \begin{table}[htbp]
    \centering
    \tiny
-   \begin{tabular}{@{}|c|c|c|c|c|c|c|@{}} % Column formatting, @{} suppresses leading/trailing space 
+   \begin{tabular}{@{}|c|c|c|c|c|c|c|@{}} % Column formatting, @{} suppresses leading/trailing space
    \hline
    rec.motorcycles & comp.sys.mac.hardware & talk.politics.misc & soc.religion.christian & comp.graphics & sci.med & talk.religion.misc\\ \hline \hline
       Austin   &  apollo& access & apple & 3 & digest &  aft\\
@@ -145,7 +141,7 @@ For each of the one-versus-rest classification problems, we extracted the \emph{
    observe & HIV & HIV & effect & mideast & Michael&\\
    rate & reason & picture & mchp & motif & pain&\\
    rec & speed & reason & say & reason & point&\\
-   Rutgers & tax & speed & software & say & SNI&\\ 
+   Rutgers & tax & speed & software & say & SNI&\\
    sgi & widget & tax & vm & speed & tu&\\ \hline
    \end{tabular}
    \caption{{\bf Top $10$ predictive words for each of the 20 Newsgroups.} The top ten words were identified after feature selection from a fitted random forest classifier using words ranked by their Gini impurity scores.}
@@ -164,7 +160,7 @@ These results highlight the benefits for some of the methods of reducing the num
 
 In this work, we compared ten different classifiers to predict the newsgroup for a particular newsgroup post using bag-of-words features. We found that, considering precision, recall, and time, the decision tree and random forest classifiers showed superior performance on this task.  The effect of feature selection was mostly on the time, although the improvement in performance was substantial for the random forest classifier on this task.
 
-There are a number of directions to go that would improve these results. First, we could expand our data set using available data from these and other related newsgroups. Second, we could consider more sophisticated features for the newsgroup posts than dictionary word counts; bi-grams, post length, or punctuation may be useful in this classification task. Third, we could use the most promising models in a more problem-tailored way. In particular, because the random forest classifier showed such promise in this task, we could consider applying it to this problem using multi class class labels instead of one-versus-rest class labels, and reducing the dimension of the feature space using supervised latent Dirichlet allocation based methods~\cite{zhu2009,lacoste2009}. 
+There are a number of directions to go that would improve these results. First, we could expand our data set using available data from these and other related newsgroups. Second, we could consider more sophisticated features for the newsgroup posts than dictionary word counts; bi-grams, post length, or punctuation may be useful in this classification task. Third, we could use the most promising models in a more problem-tailored way. In particular, because the random forest classifier showed such promise in this task, we could consider applying it to this problem using multi class class labels instead of one-versus-rest class labels, and reducing the dimension of the feature space using supervised latent Dirichlet allocation based methods~\cite{zhu2009,lacoste2009}.
 
 %\subsubsection*{Acknowledgments}
 
